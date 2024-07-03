@@ -4,10 +4,16 @@ This project contains several HTML files and associated CSS files for a travel a
 
 
 ├── index.html
+
 ├── destinations-gallery.html
+
 ├── contact.html
+
 ├── contact-success.html
+
 └── destinations
+
+    |
     └── paris.html
 
 ## HTML Files
