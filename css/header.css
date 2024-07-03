@@ -1,0 +1,192 @@
+/* Styles for the top bar */
+#topbar {
+  /* Adds a gradient background */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6), /* Darker at the top */
+    rgba(0, 0, 0, 0)    /* Transparent at the bottom */
+  );
+  padding: 20px 0;  /* Adds vertical padding */
+}
+
+/* Styles for the container within the top bar */
+#topbar > .wrap {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);  /* Adds a semi-transparent border */
+  display: grid; /* Uses grid layout */
+  grid-template-columns: 1fr 1fr 1fr;  /* Three equal columns */
+  padding-bottom: 20px; /* Adds bottom padding */
+}
+
+/* Styles for the logo */
+#logo {
+  display: flex; /* Uses flexbox layout */
+  height: 40px; /* Sets the height */
+  justify-content: center; /* Centers the logo horizontally */
+}
+
+/* Styles for the menu */
+#menu {
+  display: flex; /* Uses flexbox layout */
+  justify-content: flex-end; /* Aligns items to the right */
+}
+
+/* Styles for the navigation links in the menu */
+#menu nav a {
+  color: white; /* White text color */
+  border-bottom: 1px solid transparent; /* Transparent bottom border */
+  line-height: 40px; /* Sets the line height */
+  text-decoration: none; /* Removes underline */
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Adds left margin to all navigation links except the first */
+#menu nav a:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+/* Hover effect for navigation links */
+#menu nav a:hover {
+  border-color: white; /* Changes bottom border color to white */
+  color: white; /* Ensures text color stays white */
+}
+
+/* Styles for button links in the menu */
+#menu nav a.btn {
+  color: black; /* Black text color */
+  border-radius: 100px; /* Rounded corners */
+  border: 0; /* Removes border */
+  padding: 0 1.5rem; /* Adds horizontal padding */
+}
+
+/* Hover effect for button links in the menu */
+#menu nav a.btn:hover {
+  background: var(--bs-warning); /* Changes background color */
+  color: white; /* Changes text color to white */
+}
+
+/* Styles for the mobile menu icon */
+#menu .menu-bars {
+  height: 2.2rem; /* Sets the height */
+}
+
+/* Styles for the search input field */
+#search-field {
+  background-color: white; /* White background */
+  border: none; /* Removes border */
+  color: black; /* White text color */
+}
+
+/* Styles for the placeholder text in the search field */
+#search-field::placeholder {
+  color: grey;  /* Grey placeholder text color */
+}
+
+/* Styles for the header section */
+header {
+  /* A way to use an image in a background: */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 60%, /* Transparent at the top */
+      rgba(0, 0, 0, 0.7)    /* Darker at the bottom */
+    ),
+    url('/images/header.jpg'); /* Background image */
+  background-position: center; /* Centers the image */
+  background-size: cover; /* Ensures image covers the background */
+  color: white; /* White text color */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* space out children */
+  flex-direction: column; /* Arranges children in a column */
+  justify-content: space-between; /* Space between children */
+  padding-bottom: 30px; /* Adds bottom padding */
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;  /* Font family */
+}
+
+/* Styles for the main header text */
+header h1 {
+  font-size: 50px; /* Large font size */
+  font-weight: bold; /* Bold text */
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3); /* Adds text shadow */
+}
+
+/* Styles for the tagline in the booking section */
+#book .tagline {
+  text-transform: uppercase; /* Uppercase text */
+  text-align: initial; /* Aligns text to the start (left by default) */
+}
+
+/* Styles for the booking form */
+#book form {
+  display: grid; /* Uses grid layout */
+  grid-template-areas: /* Defines grid areas */
+    "destination destination destination"
+    "from to guests"
+    "submit submit submit";
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Three equal columns */
+  grid-auto-flow: column; /* Places items in columns */
+  gap: 10px; /* Space between grid items */
+}
+
+/* Styles for the submit button */
+#book button[type="submit"] {
+  border-radius: 100px; /* Rounded corners */
+  border: 0; /* Removes border */
+  outline: none; /* Removes outline */
+  text-align: center; /* Centers text */
+  vertical-align: bottom; /* Aligns vertically to the bottom */
+  margin-top: 1.5rem; /* Adds top margin */
+}
+
+/* Grid area assignment for form fields */
+#book form .destination-select {
+  grid-area: destination; /* Assigns to the destination grid area */
+}
+
+#book form .from {
+  grid-area: from; /* Assigns to the from grid area */
+}
+
+#book form .to {
+  grid-area: to; /* Assigns to the to grid area */
+}
+
+#book form .guests {
+  grid-area: guests; /* Assigns to the guests grid area */
+}
+
+#book form .submit {
+  grid-area: submit; /* Assigns to the submit grid area */
+}
+
+/* Ensures submit button spans the full width of its grid area */
+#book form .submit button {
+  width: 100%;
+}
+
+header.small-header {
+  height: 40vh;
+}
+
+
+/* Media query for screens wider than 768px */
+@media screen and (min-width: 768px) {
+  /* Adjusts grid layout for larger screens */
+  #book form {
+    grid-template-areas: /* Redefines grid areas */
+      "destination from to guests submit";
+  }
+
+  /* Increases font size for the main header text on larger screens */
+  #book h1 {
+    font-size: 64px;
+  }
+
+  /* Adds a background gradient for the header on larger screens */
+  #header::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+}
