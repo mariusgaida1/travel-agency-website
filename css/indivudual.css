@@ -1,0 +1,60 @@
+#destination-details {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text {
+  flex: 1;
+  max-width: 60%; /* Adjust text width as desired */
+}
+
+.text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.image {
+  flex: 1;
+  margin-left: 20px; /* Adjust spacing between text and image */
+}
+
+.image img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto;
+  display: block; /* Remove any default inline styles */
+  margin-bottom: 20px; /* Adjust spacing below image */
+}
+
+.book-form {
+  margin-top: 40px;
+}
+
+.book-form h2 {
+  margin-bottom: 20px;
+}
+
+.book-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.book-form .submit {
+  text-align: right;
+}
+
+.book-form button {
+  background: #ffc107;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
