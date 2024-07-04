@@ -79,12 +79,12 @@
 
   /* Setting border-radius for first .destination item */
   .destination:first-of-type {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0 0 0 0;
   }
 
    /* Setting border-radius for last .destination item */
   .destination:last-of-type {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0 0 0;
   }
 
   /* Adjusting max-height for images within .destination items */
